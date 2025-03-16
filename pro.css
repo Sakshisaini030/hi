@@ -1,0 +1,100 @@
+/* Apply animated gradient background */
+body {
+
+  font-family: Arial, sans-serif;
+  margin-top: 50%;
+  background: linear-gradient(-45deg, #e1b2bd, #902310, #75a8db, #28a745);
+  background-size: 400% 400%;
+  animation: gradientBG 6s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+}
+
+/* Form Container - Glowing border animation */
+.form-container {
+  margin-top: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  animation: glowBorder 3s linear infinite;
+}
+
+/* Input & Select Field Styling */
+input, select, textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Input Focus Effect */
+input:focus, select:focus, textarea:focus {
+  border-color: #ff416c;
+  box-shadow: 0 0 8px rgba(255, 65, 108, 0.8);
+  transform: scale(1.03);
+}
+
+/* Button Styling */
+button {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 75, 43, 0.8);
+}
+
+/* Button Click Effect */
+button:active {
+  transform: scale(0.95);
+  background: linear-gradient(45deg, #ff2e63, #ff105f);
+}
+
+/* Success Message Animation */
+.hidden {
+  display: none;
+  color: green;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animated Background Keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glowing Border Animation */
+@keyframes glowBorder {
+  0% { box-shadow: 0 0 10px #ff416c; }
+  50% { box-shadow: 0 0 20px #1e90ff; }
+  100% { box-shadow: 0 0 10px #28a745; }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

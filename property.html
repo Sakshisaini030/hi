@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Inquiry Form</title>
+    <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Property Inquiry Form</h2>
+        <b><p>Fill out the form below to inquire about a property.</p></b>
+        
+        <form id="inquiry-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="property">Property Type</label>
+            <select id="property">
+                <option value="house">Single Side Facing</option>
+                <option value="apartment">Double Side Facing (L-Shape)</option>
+                <option value="land">Triple Side Facing</option>
+                
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Submit Inquiry</button>
+        </form>
+
+        <p id="success-message" class="hidden">Thank you! Your inquiry has been submitted.</p>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    emailjs.init("g63lsD8BQnYqzgJvl"); // Yahan apna EmailJS Public Key daalo
+</script>
+<script src="pro.js"></script>
+
+</body>
+</html>
